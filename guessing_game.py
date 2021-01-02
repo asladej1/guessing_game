@@ -15,8 +15,7 @@ hi_score = []
 def start_game():
     answer = random.randint(1,10)
     num_of_guess = 0
-   
-
+    
     while answer > 0:
         try:
             guess= int(input("Pick an integer between 1 & 10:  "))
@@ -34,7 +33,9 @@ def start_game():
                 if replay.lower()== "yes":
                     current_hi_score(num_of_guess)
                     start_game()
+                
                 else:
+                    print("Thanks for playing, comeback again!")
                     exit()
             
             else:
@@ -55,10 +56,4 @@ def current_hi_score(num_of_guess):
             
 
 
-start_game()   
-
-
-
-
-
-
+start_game()     
